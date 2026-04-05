@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zihad Sheikh | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #05070a;
+            color: #cbd5e1;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .glass-nav {
+            background: rgba(10, 13, 20, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to right, #60a5fa, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-card {
+            background: #0a0d14;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Ambient Background Effects */
+        .noise {
+            position: fixed;
+            inset: 0;
+            background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .dot-pattern {
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .glow {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="dot-pattern"></div>
+    <div class="glow bg-blue-600/10 -top-20 -left-20"></div>
+    <div class="glow bg-indigo-600/10 -bottom-20 -right-20"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 py-8 sm:px-6 lg:py-16">
+        
+        <!-- Navigation -->
+        <nav class="sticky top-6 z-50 flex justify-between items-center mb-16 px-6 py-4 rounded-2xl glass-nav shadow-2xl">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="zap" class="text-white w-4 h-4 fill-white"></i>
+                </div>
+                <span class="font-bold tracking-tighter text-white text-lg">ZS.DEV</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+            </div>
+            <a href="#contact" class="text-xs bg-blue-600 hover:bg-blue-500 text-white border border-blue-400/20 px-5 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-lg shadow-blue-600/20">
+                <i data-lucide="mail" class="w-3.5 h-3.5"></i> Hire Me
+            </a>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="mb-32 relative pt-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-widest uppercase mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                System Online: Available
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black text-white tracking-tight mb-6 leading-tight">
+                Zihad <span class="hero-gradient">Sheikh</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed">
+                Architecting <span class="text-white font-semibold">autonomous systems</span> and high-performance digital products for the global market.
+            </p>
+        </header>
+
+        <!-- Services Section -->
+        <section id="services" class="mb-32 scroll-mt-28">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-sm font-black uppercase tracking-[0.3em] text-slate-500">Service Modules</h2>
+                <div class="h-[1px] flex-grow bg-white/10"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="group p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-blue-500/50 transition-all duration-500">
+                    <i data-lucide="cpu" class="text-blue-500 w-8 h-8 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Automation</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Scalable bots and data mining solutions built with Python.</p>
+                </div>
+                <div class="group p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-blue-500/50 transition-all duration-500">
+                    <i data-lucide="monitor" class="text-blue-500 w-8 h-8 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Web Platforms</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Modern interfaces built for speed using React and Next.js.</p>
+                </div>
+                <div class="group p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-blue-500/50 transition-all duration-500">
+                    <i data-lucide="smartphone" class="text-blue-500 w-8 h-8 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Native Apps</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">High-end iOS and Android mobile experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-32 scroll-mt-28">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-sm font-black uppercase tracking-[0.3em] text-slate-500">Tech Stack</h2>
+                <div class="h-[1px] flex-grow bg-white/10"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-white tracking-tight italic">Precision Engineering.</h3>
+                    <p class="text-slate-400 leading-relaxed text-lg">My stack is focused on type-safety, extreme performance, and seamless user experiences.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase font-bold tracking-widest text-slate-400">Node.js</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase font-bold tracking-widest text-slate-400">Next.js</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase font-bold tracking-widest text-slate-400">Python</span>
+                        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase font-bold tracking-widest text-slate-400">Tailwind</span>
+                    </div>
+                </div>
+                <div class="space-y-6 bg-white/[0.02] border border-white/5 p-8 rounded-3xl backdrop-blur-sm shadow-xl">
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2 text-[10px] font-bold tracking-widest uppercase text-slate-500">
+                            <span>TypeScript</span>
+                            <span class="text-blue-400">95%</span>
+                        </div>
+                        <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-600 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2 text-[10px] font-bold tracking-widest uppercase text-slate-500">
+                            <span>React Architecture</span>
+                            <span class="text-blue-400">90%</span>
+                        </div>
+                        <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-600 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2 text-[10px] font-bold tracking-widest uppercase text-slate-500">
+                            <span>Automation Logic</span>
+                            <span class="text-blue-400">92%</span>
+                        </div>
+                        <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-600 rounded-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-32 scroll-mt-28">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-sm font-black uppercase tracking-[0.3em] text-slate-500">Active Projects</h2>
+                <div class="h-[1px] flex-grow bg-white/10"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="group p-6 rounded-2xl bg-[#0a0d14] border border-white/10 hover:border-blue-500/50 transition-all shadow-xl hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 rounded-lg bg-blue-600/10 text-blue-500"><i data-lucide="layout" class="w-5 h-5"></i></div>
+                        <i data-lucide="external-link" class="w-4 h-4 text-slate-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Auto-Scraper Engine</h3>
+                    <p class="text-[10px] text-blue-500 font-mono mb-3 uppercase tracking-wider">Python / Automation</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">Scalable browser automation for massive data mining operations.</p>
+                </div>
+                <div class="group p-6 rounded-2xl bg-[#0a0d14] border border-white/10 hover:border-blue-500/50 transition-all shadow-xl hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 rounded-lg bg-blue-600/10 text-blue-500"><i data-lucide="layout" class="w-5 h-5"></i></div>
+                        <i data-lucide="external-link" class="w-4 h-4 text-slate-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">FinTech Platform</h3>
+                    <p class="text-[10px] text-blue-500 font-mono mb-3 uppercase tracking-wider">React / Next.js</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">Real-time financial tracking and predictive analytics dashboard.</p>
+                </div>
+                <div class="group p-6 rounded-2xl bg-[#0a0d14] border border-white/10 hover:border-blue-500/50 transition-all shadow-xl hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 rounded-lg bg-blue-600/10 text-blue-500"><i data-lucide="layout" class="w-5 h-5"></i></div>
+                        <i data-lucide="external-link" class="w-4 h-4 text-slate-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Custom Bot Systems</h3>
+                    <p class="text-[10px] text-blue-500 font-mono mb-3 uppercase tracking-wider">Node.js / API</p>
+                    <p class="text-sm text-slate-400 leading-relaxed">Intelligent bot solutions for workflow and task optimization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="relative rounded-[2.5rem] contact-card p-8 md:p-16 overflow-hidden shadow-2xl scroll-mt-28">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-600/10 to-transparent"></div>
+            <div class="relative z-10 max-w-xl">
+                <div class="flex items-center gap-3 mb-6">
+                    <i data-lucide="terminal" class="text-blue-500 w-5 h-5"></i>
+                    <span class="text-xs font-mono text-blue-500/70 uppercase tracking-widest">direct_sync_v4.0</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter italic leading-none">Ready to start?</h2>
+                
+                <div class="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-xl mb-10 w-fit">
+                   <span class="text-blue-400 font-mono text-xs" id="email-text">zihadsheikh1235@gmail.com</span>
+                   <button onclick="copyEmail()" class="p-1 hover:text-white transition-colors" id="copy-btn">
+                     <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                   </button>
+                </div>
+
+                <div id="form-wrapper">
+                    <form action="https://formspree.io/f/mqakpnow" method="POST" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <input required name="name" placeholder="IDENTIFIER (NAME)" class="w-full px-5 py-4 bg-white/[0.03] border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500/50 font-mono text-xs transition-all">
+                            <input required type="email" name="email" placeholder="NETWORK_ADDR (EMAIL)" class="w-full px-5 py-4 bg-white/[0.03] border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500/50 font-mono text-xs transition-all">
+                        </div>
+                        <textarea required name="message" rows="4" placeholder="MESSAGE_PAYLOAD..." class="w-full px-5 py-4 bg-white/[0.03] border border-white/10 rounded-2xl text-white outline-none focus:border-blue-500/50 font-mono text-xs resize-none transition-all"></textarea>
+                        
+                        <!-- Honeypot field for spam prevention -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-5 rounded-2xl transition-all shadow-lg shadow-blue-600/30 active:scale-95 group">
+                            <span class="flex items-center justify-center gap-2">
+                                INITIALIZE CONTACT <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-20 flex flex-col md:flex-row justify-between items-center gap-8 border-t border-white/10 pt-12 pb-12">
+            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-widest flex items-center gap-4">
+                <span>© 2026 ZIhad Sheikh</span>
+                <div class="w-1 h-1 bg-slate-800 rounded-full"></div>
+                <span>Autonomous Digital Solutions</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="#services" class="p-2 text-slate-600 hover:text-white transition-colors"><i data-lucide="monitor" class="w-4 h-4"></i></a>
+                <a href="#skills" class="p-2 text-slate-600 hover:text-white transition-colors"><i data-lucide="zap" class="w-4 h-4"></i></a>
+                <a href="#projects" class="p-2 text-slate-600 hover:text-white transition-colors"><i data-lucide="layout" class="w-4 h-4"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Copy Email to Clipboard
+        function copyEmail() {
+            const email = "zihadsheikh1235@gmail.com";
+            const el = document.createElement('textarea');
+            el.value = email;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            
+            const btn = document.getElementById('copy-btn');
+            btn.innerHTML = '<i data-lucide="check" class="w-3.5 h-3.5 text-green-400"></i>';
+            lucide.createIcons();
+            
+            setTimeout(() => {
+                btn.innerHTML = '<i data-lucide="copy" class="w-3.5 h-3.5"></i>';
+                lucide.createIcons();
+            }, 2000);
+        }
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
